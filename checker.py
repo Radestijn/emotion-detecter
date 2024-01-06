@@ -2,12 +2,10 @@ import cv2
 from deepface import DeepFace
 import time
 
-# Model en cascade classifier laden
 model = DeepFace.build_model("Emotion")
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 emotion_labels = ['angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral']
 
-# Start de camera
 cap = cv2.VideoCapture(0)
 time.sleep(2)
 emotions = {}
